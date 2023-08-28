@@ -38,3 +38,4 @@ print(is_anagram("hello", "world"))  # False
 print(is_anagram("hello", "olleh"))  # True
 print(is_anagram("anagram!", "nagaram!"))  # True
 print(is_anagram("rag", "car"))  # False
+
