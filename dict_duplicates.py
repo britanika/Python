@@ -18,4 +18,4 @@ def duplicates_counter_in_string():
     return dt
 
 
-duplicates_counter_in_string()
+
