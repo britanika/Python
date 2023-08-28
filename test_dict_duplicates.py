@@ -1,5 +1,6 @@
 import unittest
 
+
 def duplicates_counter_in_string(letters):
     if letters == "":
         return {}  # Return an empty dictionary for an empty string
@@ -17,6 +18,7 @@ def duplicates_counter_in_string(letters):
             dt[x] = y
     return dt
 
+
 class MyTest(unittest.TestCase):
     def test_empty_string(self):
         letters = ''
@@ -33,6 +35,7 @@ class MyTest(unittest.TestCase):
     def test_mixed_characters(self):
         letters = 'ss awaha'
         self.assertEqual(duplicates_counter_in_string(letters), {'s': 2, 'a': 3, 'w': 1, 'h': 1})
+
 
 if __name__ == '__main__':
     unittest.main()
