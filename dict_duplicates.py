@@ -1,5 +1,4 @@
-def duplicates_counter_in_string():
-    letters = input("Write the string: ")
+def duplicates_counter_in_string(letters):
     if letters == "":
         print("String is empty.")
     dc = {}
@@ -16,6 +15,5 @@ def duplicates_counter_in_string():
             dt[x] = y
             print(x, y)
     return dt
-
 
 
