@@ -1,3 +1,4 @@
+
 letters = input("Write the string: ")
 duplicates = []
 for i in range(0, len(letters)):
