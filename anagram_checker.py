@@ -1,4 +1,3 @@
-# F
 # def is_anagram(s1, s2) -> bool:
 # return sorted(s1) == sorted(s2) # O(nlogn)
 
