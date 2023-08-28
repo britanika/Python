@@ -1,10 +1,8 @@
 import unittest
 
-
-def my_function():
-    letters = input("Write the string: ")
+def duplicates_counter_in_string(letters):
     if letters == "":
-        print("String is empty.")
+        return {}  # Return an empty dictionary for an empty string
     dc = {}
     for letter in letters:
         if dc.get(letter) is None:
@@ -15,35 +13,26 @@ def my_function():
     dt = {}
 
     for x, y in dc.items():
-        if y > 1 and x != " ":
+        if y >= 1 and x != " ":
             dt[x] = y
-            print(x, y)
     return dt
 
-
 class MyTest(unittest.TestCase):
-    def test(self):
+    def test_empty_string(self):
         letters = ''
-        self.assertEqual(my_function(), {})
-        print("Empty")
+        self.assertEqual(duplicates_counter_in_string(letters), {})
 
+    def test_duplicate_letters(self):
+        letters = 'la la'
+        self.assertEqual(duplicates_counter_in_string(letters), {'l': 2, 'a': 2})
 
-#class MyTest(unittest.TestCase):
-#   def test(self):
-#       letters = 'la la'
-#       self.assertEqual(my_function(), {'l': 2, 'a': 2})
-#       print(True)
+    def test_special_characters(self):
+        letters = '!!! &&&#### 222'
+        self.assertEqual(duplicates_counter_in_string(letters), {'!': 3, '&': 3, '#': 4, '2': 3})
 
-#class MyTest(unittest.TestCase):
-#   def test(self):
-#       letters = 'ss awaha'
-#       self.assertEqual(my_function(), {'s': 2, 'a': 3})
-#       print(True)
+    def test_mixed_characters(self):
+        letters = 'ss awaha'
+        self.assertEqual(duplicates_counter_in_string(letters), {'s': 2, 'a': 3, 'w': 1, 'h': 1})
 
-
-#class MyTest(unittest.TestCase):
-#  def test(self):
-#        letters = '!!! &&&#### 222'
-#       self.assertEqual(my_function(), {'!': 3, '&': 3, '#': 4, '2': 3})
-#       print(True)
-
+if __name__ == '__main__':
+    unittest.main()

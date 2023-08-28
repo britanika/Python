@@ -1,4 +1,4 @@
-def my_function():
+def duplicates_counter_in_string():
     letters = input("Write the string: ")
     if letters == "":
         print("String is empty.")
@@ -12,10 +12,10 @@ def my_function():
     dt = {}
 
     for x, y in dc.items():
-        if y > 1 and x != " ":
+        if y >= 1 and x != " ":
             dt[x] = y
             print(x, y)
     return dt
 
 
-my_function()
+duplicates_counter_in_string()
