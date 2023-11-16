@@ -3,7 +3,7 @@ def find_max(numbers: list) -> int:
     for number in numbers:
         if number > maximum:
             maximum = number
-    return maximum
+    print(maximum)
 
 
 num = [3, 5, 2, 7, 8]
